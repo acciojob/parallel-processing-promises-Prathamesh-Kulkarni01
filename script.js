@@ -9,11 +9,11 @@ const images = [
 ];
 
 btn.addEventListener('click', () => {
-	try{
+
 		let promises=images.map((img)=>{
 		return fetch(img.url)
 	})
-	alert("promises")
+
 	Promise.all(promises).then(blobs=>{
 		blobs.map(blob=>{
 			console.log(blob)
@@ -23,9 +23,6 @@ btn.addEventListener('click', () => {
         output.appendChild(img);
 		})
 		
-	})
-	}.catch(err=>{
-	console.log(`Failed to load image's URL: ${image.url}`)
 	})
 	
 })
