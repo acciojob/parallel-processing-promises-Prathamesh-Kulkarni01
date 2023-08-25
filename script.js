@@ -15,7 +15,7 @@ btn.addEventListener('click', () => {
 	})
 
 	Promise.all(promises).then(blobs=>{
-		blobs.map(blob=>{
+		images.map(blob=>{
 			console.log(blob)
 			 let img = document.createElement("img");
         img.src = blob.url;
